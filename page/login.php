@@ -1,7 +1,7 @@
 <?php
 	//LOGIN.PHP
 	
-	require_once("../../../config.php");
+	require_once("../../config.php");
 	$database = "if15_mkoinc_3";
 	$mysqli = new mysqli ($servername, $username,
 	$password, $database);
@@ -146,7 +146,7 @@
 				
           //ss-s on string email, s on string password		
 	  
-				$stmt ->bind_param("ss", $name, $surename, $mail, $hash);
+				$stmt ->bind_param("ss", $name, $surename,$username, $email, $hash);
 				$stmt ->execute();
 				$stmt ->close();
       }
