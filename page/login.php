@@ -146,7 +146,7 @@
 				
           //ss-s on string email, s on string password		
 	  
-				$stmt ->bind_param("ss", $name, $surename,$username, $email, $hash);
+				$stmt ->bind_param("ssss", $name, $surename, $email, $hash);
 				$stmt ->execute();
 				$stmt ->close();
       }
